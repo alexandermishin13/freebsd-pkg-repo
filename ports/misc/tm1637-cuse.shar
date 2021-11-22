@@ -1,0 +1,88 @@
+#!/bin/sh
+# This is a shell archive
+echo x misc/tm1637-cuse
+mkdir -p misc/tm1637-cuse > /dev/null 2>&1
+echo x misc/tm1637-cuse/Makefile
+sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
+X# $FreeBSD$
+X
+XPORTNAME=	tm1637-cuse
+XDISTVERSION=	g20211122
+XCATEGORIES=	misc
+XDIST_SUBDIR=	gpio
+X
+XMAINTAINER=	mishin@mh.net.ru
+XCOMMENT=	FreeBSD cuse based daemon for a tm1637 display
+X
+XLICENSE=	BSD2CLAUSE
+XLICENSE_FILE=	${WRKSRC}/LICENSE
+X
+XONLY_FOR_ARCHS=	armv7
+XONLY_FOR_ARCHS_REASON=	did not tested on anything else
+X
+X# gitlab variables
+XUSE_GITLAB=	yes
+XGL_ACCOUNT=	alexandermishin13
+XGL_PROJECT=	tm1637-cuse
+XGL_COMMIT=	01f986729ccca1443a5108d4cf71d637c9b08e38
+X
+XSUB_FILES=	pkg-message
+X
+XOPTIONS_DEFINE=	DOCS
+X
+Xpost-install:
+X	@${MKDIR} ${STAGEDIR}${PREFIX}/etc
+X	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/tm1637d ${STAGEDIR}${PREFIX}/etc/rc.conf.d/tm1637d.sample
+X
+Xpost-install-DOCS-on:
+X	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+X	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+X
+X.include <bsd.port.mk>
+SHAR_END
+echo x misc/tm1637-cuse/pkg-descr
+sed 's/^X//' > misc/tm1637-cuse/pkg-descr << 'SHAR_END'
+XThe "tm1637d" is the cuse based daemon for a tm1637 4 digit 7 segment display.
+X
+XAt startup, the service creates a character device that you can use to control
+Xthe display and output of numbers. The kernel module "cuse" is required for
+Xrunning the service.
+X
+XWWW: https://gitlab.com/alexandermishin13/tm1637-cuse
+SHAR_END
+echo x misc/tm1637-cuse/distinfo
+sed 's/^X//' > misc/tm1637-cuse/distinfo << 'SHAR_END'
+XTIMESTAMP = 1637563262
+XSHA256 (gpio/alexandermishin13-tm1637-cuse-01f986729ccca1443a5108d4cf71d637c9b08e38_GL0.tar.gz) = f8306d2e1fc8fed56e376b3ee44e849ef3b169f517e84789ba981eff9181a46b
+XSIZE (gpio/alexandermishin13-tm1637-cuse-01f986729ccca1443a5108d4cf71d637c9b08e38_GL0.tar.gz) = 12515
+SHAR_END
+echo x misc/tm1637-cuse/pkg-plist
+sed 's/^X//' > misc/tm1637-cuse/pkg-plist << 'SHAR_END'
+Xsbin/tm1637d
+Xbin/tm1637ctl
+Xman/man8/tm1637d.8.gz
+Xman/man1/tm1637ctl.1.gz
+X@dir etc/rc.conf.d
+X@sample etc/rc.conf.d/tm1637d.sample
+X%%PORTDOCS%%%%DOCSDIR%%/README.md
+SHAR_END
+echo x misc/tm1637-cuse/files
+mkdir -p misc/tm1637-cuse/files > /dev/null 2>&1
+echo x misc/tm1637-cuse/files/pkg-message.in
+sed 's/^X//' > misc/tm1637-cuse/files/pkg-message.in << 'SHAR_END'
+X[
+X{ type: install
+X  message: <<EOM
+X
+XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
+XREADME.md is installed in %%DOCSDIR%%.
+X
+XLoad a cuse kernel module before start the service "tm1637d":
+X
+Xkldload cuse
+X
+XEOM
+X}
+X]
+SHAR_END
+exit
