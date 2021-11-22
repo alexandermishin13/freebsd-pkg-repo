@@ -1,0 +1,83 @@
+#!/bin/sh
+# This is a shell archive
+echo x misc/rcrecv-daemon
+mkdir -p misc/rcrecv-daemon > /dev/null 2>&1
+echo x misc/rcrecv-daemon/Makefile
+sed 's/^X//' > misc/rcrecv-daemon/Makefile << 'SHAR_END'
+X# $FreeBSD$
+X
+XPORTNAME=	rcrecv-daemon
+XDISTVERSION=	g20211122
+XCATEGORIES=	misc
+XDIST_SUBDIR=	gpio
+X
+XMAINTAINER=	mishin@mh.net.ru
+XCOMMENT=	FreeBSD RC receiver daemon for the rcrecv-kmod driver.
+X
+XLICENSE=	BSD2CLAUSE
+XLICENSE_FILE=	${WRKSRC}/LICENSE
+X
+XONLY_FOR_ARCHS=	armv7
+XONLY_FOR_ARCHS_REASON=	not tested on anything else
+X
+X# gitlab variables
+XUSE_GITLAB=	yes
+XGL_ACCOUNT=	alexandermishin13
+XGL_PROJECT=	rcrecv-daemon
+XGL_COMMIT=	5fa9ae4a38f6f823135959e0a83d0592d8a16715
+X
+XSUB_FILES=	pkg-message
+X
+XOPTIONS_DEFINE=	DOCS
+X
+Xpost-install:
+X	@${MKDIR} ${STAGEDIR}${PREFIX}/etc
+X	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/rcrecv_daemon ${STAGEDIR}${PREFIX}/etc/rc.conf.d/rcrecv_daemon.sample
+X
+Xpost-install-DOCS-on:
+X	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+X	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+X
+X.include <bsd.port.mk>
+SHAR_END
+echo x misc/rcrecv-daemon/distinfo
+sed 's/^X//' > misc/rcrecv-daemon/distinfo << 'SHAR_END'
+XTIMESTAMP = 1637610453
+XSHA256 (gpio/alexandermishin13-rcrecv-daemon-5fa9ae4a38f6f823135959e0a83d0592d8a16715_GL0.tar.gz) = 901aafe70b83775d86dad04608c04d059a2d8c6041f6579071396caa38a7521b
+XSIZE (gpio/alexandermishin13-rcrecv-daemon-5fa9ae4a38f6f823135959e0a83d0592d8a16715_GL0.tar.gz) = 7678
+SHAR_END
+echo x misc/rcrecv-daemon/pkg-plist
+sed 's/^X//' > misc/rcrecv-daemon/pkg-plist << 'SHAR_END'
+Xsbin/rcrecv-daemon
+Xman/man8/rcrecv-daemon.8.gz
+X@dir etc/rc.conf.d
+X@sample etc/rc.conf.d/rcrecv_daemon.sample
+X%%PORTDOCS%%%%DOCSDIR%%/README.md
+SHAR_END
+echo x misc/rcrecv-daemon/files
+mkdir -p misc/rcrecv-daemon/files > /dev/null 2>&1
+echo x misc/rcrecv-daemon/pkg-descr
+sed 's/^X//' > misc/rcrecv-daemon/pkg-descr << 'SHAR_END'
+XFreeBSD RC receiver daemon for the "rcrecv.ko" driver.
+X
+XA "rcrecv-daemon" listens for a poll(2) or kqueue(2) event from the "rcrecv.ko"
+Xdriver which means that the driver have a code for the daemon. After the event
+Xoccurs the daemon reads the code from a character device `/dev/rcrecv`.
+XFor these codes, the daemon changes the status of the GPIO pins in the way it
+Xwas configured at startup.
+X
+XWWW: https://gitlab.com/alexandermishin13/rcrecv-daemon
+SHAR_END
+echo x misc/rcrecv-daemon/files/pkg-message.in
+sed 's/^X//' > misc/rcrecv-daemon/files/pkg-message.in << 'SHAR_END'
+X[
+X{ type: install
+X  message: <<EOM
+X
+XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
+XThe README.md file is installed in %%DOCSDIR%%.
+XEOM
+X}
+X]
+SHAR_END
+exit
