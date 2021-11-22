@@ -7,9 +7,9 @@ sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20211121
+XDISTVERSION=	g20211122
 XCATEGORIES=	misc
-XDIST_SUBDIR=	arm/${GL_ACCOUNT}
+XDIST_SUBDIR=	gpio
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD daemon for a BH1750FVI based light sensor
@@ -27,7 +27,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-control
-XGL_COMMIT=	941f638dc77e5442dac0dbdf27eeffe7f77b3e85
+XGL_COMMIT=	2a79ea32df9ff5182f6875c8b6ed785bdfc194bb
 X
 XSUB_FILES=	pkg-message
 X
@@ -47,9 +47,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-control/distinfo
 sed 's/^X//' > misc/bh1750-control/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637514801
-XSHA256 (arm/alexandermishin13/alexandermishin13-bh1750-control-941f638dc77e5442dac0dbdf27eeffe7f77b3e85_GL0.tar.gz) = d15b1027010ffcf2d5bed50b0e2e1cd5f83dc7b7a5945aa5aca9fec5701ad90c
-XSIZE (arm/alexandermishin13/alexandermishin13-bh1750-control-941f638dc77e5442dac0dbdf27eeffe7f77b3e85_GL0.tar.gz) = 13446
+XTIMESTAMP = 1637568767
+XSHA256 (gpio/alexandermishin13-bh1750-control-2a79ea32df9ff5182f6875c8b6ed785bdfc194bb_GL0.tar.gz) = f1c32185f1a90ca67676846023269e3e0d60a527caebeeca99f0b446eaf3df84
+XSIZE (gpio/alexandermishin13-bh1750-control-2a79ea32df9ff5182f6875c8b6ed785bdfc194bb_GL0.tar.gz) = 12359
 SHAR_END
 echo x misc/bh1750-control/pkg-plist
 sed 's/^X//' > misc/bh1750-control/pkg-plist << 'SHAR_END'
@@ -84,7 +84,7 @@ X{ type: install
 X  message: <<EOM
 X
 XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
-XREADME.md and sample of an sqlite3 file a installed in %%DOCSDIR%%.
+XREADME.md and sample of an sqlite3 file are installed in %%DOCSDIR%%.
 XEOM
 X}
 X]

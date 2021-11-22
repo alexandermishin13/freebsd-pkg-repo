@@ -7,9 +7,9 @@ sed 's/^X//' > misc/tm1637-kmod/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	tm1637-kmod
-XDISTVERSION=	g20211121
+XDISTVERSION=	g20211122
 XCATEGORIES=	misc
-XDIST_SUBDIR=	arm/${GL_ACCOUNT}
+XDIST_SUBDIR=	gpio
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	Kernel module for tm1637 4 digit 7 segment display
@@ -42,9 +42,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-kmod/distinfo
 sed 's/^X//' > misc/tm1637-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637442284
-XSHA256 (arm/alexandermishin13/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = a36d995ac892808692e101b881fd5d40b51d7dbb619797444c5dd1b594b596d1
-XSIZE (arm/alexandermishin13/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = 31206
+XTIMESTAMP = 1637568197
+XSHA256 (gpio/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = a36d995ac892808692e101b881fd5d40b51d7dbb619797444c5dd1b594b596d1
+XSIZE (gpio/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = 31206
 SHAR_END
 echo x misc/tm1637-kmod/pkg-descr
 sed 's/^X//' > misc/tm1637-kmod/pkg-descr << 'SHAR_END'
