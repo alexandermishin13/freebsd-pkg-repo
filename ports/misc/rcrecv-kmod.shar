@@ -1,0 +1,108 @@
+#!/bin/sh
+# This is a shell archive
+echo x misc/rcrecv-kmod
+mkdir -p misc/rcrecv-kmod > /dev/null 2>&1
+echo x misc/rcrecv-kmod/files
+mkdir -p misc/rcrecv-kmod/files > /dev/null 2>&1
+echo x misc/rcrecv-kmod/Makefile
+sed 's/^X//' > misc/rcrecv-kmod/Makefile << 'SHAR_END'
+X# $FreeBSD$
+X
+XPORTNAME=	rcrecv-kmod
+XDISTVERSION=	g20211122
+XCATEGORIES=	misc
+XDIST_SUBDIR=	gpio
+X
+XMAINTAINER=	mishin@mh.net.ru
+XCOMMENT=	FreeBSD kernel driver for gpio based remote control codes receiver.
+X
+XLICENSE=	BSD2CLAUSE
+XLICENSE_FILE=	${WRKSRC}/LICENSE
+X
+XONLY_FOR_ARCHS=	armv7
+XONLY_FOR_ARCHS_REASON=	not tested on anything else
+X
+XUSES=		kmod
+X
+X# gitlab variables
+XUSE_GITLAB=	yes
+XGL_ACCOUNT=	alexandermishin13
+XGL_PROJECT=	rcrecv-kmod
+XGL_COMMIT=	2279228b5b1f591d197d8a29c73346812d2cd934
+X
+XOPTIONS_DEFINE=	FDT DOCS
+XOPTIONS_DEFAULT=FDT
+X
+XFDT_DESC=	Enable fdt-overlays capability
+XFDT_CFLAGS=	-DFDT
+X
+XSUB_FILES=	pkg-message
+X
+Xpost-install:
+X	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+X	(cd ${WRKSRC}/fdt-overlay && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
+X
+Xpost-install-DOCS-on:
+X	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+X	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+X
+X.include <bsd.port.mk>
+SHAR_END
+echo x misc/rcrecv-kmod/distinfo
+sed 's/^X//' > misc/rcrecv-kmod/distinfo << 'SHAR_END'
+XTIMESTAMP = 1637598229
+XSHA256 (gpio/alexandermishin13-rcrecv-kmod-2279228b5b1f591d197d8a29c73346812d2cd934_GL0.tar.gz) = fe0ad7f41076c94f9c2929ee22898cc6f3a604e3a454bc9dfbf12effaf3ea689
+XSIZE (gpio/alexandermishin13-rcrecv-kmod-2279228b5b1f591d197d8a29c73346812d2cd934_GL0.tar.gz) = 196069
+SHAR_END
+echo x misc/rcrecv-kmod/pkg-descr
+sed 's/^X//' > misc/rcrecv-kmod/pkg-descr << 'SHAR_END'
+XFreeBSD kernel driver for gpio based remote control codes receiver.
+X
+XThe "rcrecv" device driver provides support for the GPIO based radio receivers
+Xsuch as the "MX-RM-5V" and similar. It creates a character device "/dev/rcrecv"
+Xreading from which returns a last received hexadecimal code as a string.
+XAlso it provides a couple of ioctl() calls.
+X
+XFor building the port You need the kernel sources installed into /usr/src.
+X
+XWWW: https://gitlab.com/alexandermishin13/rcrecv-kmod
+SHAR_END
+echo x misc/rcrecv-kmod/pkg-plist
+sed 's/^X//' > misc/rcrecv-kmod/pkg-plist << 'SHAR_END'
+X/%%KMODDIR%%/rcrecv.ko
+Xshare/examples/rcrecv-kmod/Makefile
+X@sample %%EXAMPLESDIR%%/sun8i-h2-plus-rcrecv-gpio.dtso.sample
+X@sample %%EXAMPLESDIR%%/sun8i-h3-rcrecv-gpio.dtso.sample
+X@sample %%EXAMPLESDIR%%/rcrecv-gpio-rpi2.dtso.sample
+Xman/man4/rcrecv.4.gz
+X@dir /usr/include/dev/rcrecv
+X/usr/include/dev/rcrecv/rcrecv.h
+X%%PORTDOCS%%%%DOCSDIR%%/README.md
+SHAR_END
+echo x misc/rcrecv-kmod/files/pkg-message.in
+sed 's/^X//' > misc/rcrecv-kmod/files/pkg-message.in << 'SHAR_END'
+X[
+X{
+Xtype: install
+Xmessage: <<EOM
+X
+XJust edit for Your needs one of the fdt-overlays You may find here:
+X
+X  %%EXAMPLESDIR%%/*.dtso
+X
+XType to compile and install:
+X
+X  make
+X  make install
+X
+XThen add its name w/o extention to /boot/loader.conf for apply the overlay
+Xon boot:
+X
+X  fdt_overlays="your-rcrecv-overlay"
+X
+XReboot.
+XEOM
+X}
+X]
+SHAR_END
+exit
