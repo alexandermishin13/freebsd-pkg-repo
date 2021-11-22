@@ -17,7 +17,7 @@ creator, I provide ports archives for code analysis and package building.
 Repository URL [http://pkg.mh.net.ru](http://pkg.mh.net.ru).
 I try to always use BSD 2-Clause License in my code, typical for FreeBSD.
 
-## Installation an deunstallation
+## Installation and deinstallation
 You can easy register and unregister this repository to your system.
 
 To register the repo type:
