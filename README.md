@@ -33,3 +33,9 @@ To unregister it type:
 ## To do
 
 Build and share packages for ```arm64``` architecture when I received ```Raspberry Pi 4```
+
+## Bugs
+Ports (and its packages) do not install its service files to the
+```/usr/local/etc/rc.d/```.
+
+I'll fix it soon.
