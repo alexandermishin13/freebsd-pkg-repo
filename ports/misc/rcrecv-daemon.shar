@@ -7,12 +7,14 @@ sed 's/^X//' > misc/rcrecv-daemon/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	rcrecv-daemon
-XDISTVERSION=	g20211123
+XDISTVERSION=	g20211124
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD RC receiver daemon for the rcrecv-kmod driver.
+X
+XRUN_DEPENDS=	${KMODDIR}/rcrecv.ko:misc/rcrecv-kmod
 X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
