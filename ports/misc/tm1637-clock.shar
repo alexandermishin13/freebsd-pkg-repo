@@ -1,0 +1,83 @@
+#!/bin/sh
+# This is a shell archive
+echo x misc/tm1637-clock
+mkdir -p misc/tm1637-clock > /dev/null 2>&1
+echo x misc/tm1637-clock/Makefile
+sed 's/^X//' > misc/tm1637-clock/Makefile << 'SHAR_END'
+X# $FreeBSD$
+X
+XPORTNAME=	tm1637-clock
+XDISTVERSION=	g20211123
+XCATEGORIES=	misc
+XDIST_SUBDIR=	gpio
+X
+XMAINTAINER=	mishin@mh.net.ru
+XCOMMENT=	FreeBSD RC receiver daemon for the rcrecv-kmod driver.
+X
+XLICENSE=	BSD2CLAUSE
+XLICENSE_FILE=	${WRKSRC}/LICENSE
+X
+XONLY_FOR_ARCHS=	armv7
+XONLY_FOR_ARCHS_REASON=	not tested on anything else
+X
+X# gitlab variables
+XUSE_GITLAB=	yes
+XGL_ACCOUNT=	alexandermishin13
+XGL_PROJECT=	tm1637-clock
+XGL_COMMIT=	054dac6cba64870339ff6bd653803efaa8cbc620
+X
+XSUB_FILES=	pkg-message
+X
+XOPTIONS_DEFINE=	DOCS
+X
+Xpost-install:
+X	@${MKDIR} ${STAGEDIR}${PREFIX}/etc
+X	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/tm1637clock ${STAGEDIR}${PREFIX}/etc/rc.conf.d/tm1637clock.sample
+X
+Xpost-install-DOCS-on:
+X	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+X	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+X
+X.include <bsd.port.mk>
+SHAR_END
+echo x misc/tm1637-clock/distinfo
+sed 's/^X//' > misc/tm1637-clock/distinfo << 'SHAR_END'
+XTIMESTAMP = 1637665382
+XSHA256 (gpio/alexandermishin13-tm1637-clock-054dac6cba64870339ff6bd653803efaa8cbc620_GL0.tar.gz) = 3b1fa994d4c68756bab2a3446261b2725c691827b69039100aac14110f098ef5
+XSIZE (gpio/alexandermishin13-tm1637-clock-054dac6cba64870339ff6bd653803efaa8cbc620_GL0.tar.gz) = 24802
+SHAR_END
+echo x misc/tm1637-clock/pkg-plist
+sed 's/^X//' > misc/tm1637-clock/pkg-plist << 'SHAR_END'
+Xsbin/tm1637clock
+Xman/man8/tm1637clock.8.gz
+Xetc/rc.d/tm1637clock
+X@dir etc/rc.conf.d
+X@sample etc/rc.conf.d/tm1637clock.sample
+X%%PORTDOCS%%%%DOCSDIR%%/README.md
+SHAR_END
+echo x misc/tm1637-clock/files
+mkdir -p misc/tm1637-clock/files > /dev/null 2>&1
+echo x misc/tm1637-clock/pkg-descr
+sed 's/^X//' > misc/tm1637-clock/pkg-descr << 'SHAR_END'
+XA simple clock daemon that works with a character device created by the
+Xtm1637-kmod kernel driver or the tm1637-cuse service.
+X
+XThe daemon runs in the background and uses a timer to display the time
+Xon a "tm1637" display once a minute and trigger the clock point every second
+Xor half a second.
+X
+XWWW: https://gitlab.com/alexandermishin13/tm1637-clock
+SHAR_END
+echo x misc/tm1637-clock/files/pkg-message.in
+sed 's/^X//' > misc/tm1637-clock/files/pkg-message.in << 'SHAR_END'
+X[
+X{ type: install
+X  message: <<EOM
+X
+XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
+XThe README.md file is installed in %%DOCSDIR%%.
+XEOM
+X}
+X]
+SHAR_END
+exit
