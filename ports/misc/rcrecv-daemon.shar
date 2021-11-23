@@ -7,7 +7,7 @@ sed 's/^X//' > misc/rcrecv-daemon/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	rcrecv-daemon
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20211123
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -50,6 +50,7 @@ echo x misc/rcrecv-daemon/pkg-plist
 sed 's/^X//' > misc/rcrecv-daemon/pkg-plist << 'SHAR_END'
 Xsbin/rcrecv-daemon
 Xman/man8/rcrecv-daemon.8.gz
+Xetc/rc.d/rcrecv-daemon
 X@dir etc/rc.conf.d
 X@sample etc/rc.conf.d/rcrecv_daemon.sample
 X%%PORTDOCS%%%%DOCSDIR%%/README.md

@@ -7,7 +7,7 @@ sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20211123
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -60,6 +60,7 @@ Xman/man8/bh1750-daemon.8.gz
 X@dir /var/db/bh1750
 X@dir etc/rc.conf.d
 X@sample etc/rc.conf.d/bh1750_daemon.sample
+Xetc/rc.d/bh1750-daemon
 X%%PORTDOCS%%%%DOCSDIR%%/README.md
 X%%PORTDOCS%%%%DOCSDIR%%/actions.sqlite.sql.example
 SHAR_END
@@ -84,7 +85,7 @@ X{ type: install
 X  message: <<EOM
 X
 XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
-XREADME.md and sample of an sqlite3 file are installed in %%DOCSDIR%%.
+XA README.md and a sample of an sqlite3 file are installed in %%DOCSDIR%%.
 XEOM
 X}
 X]

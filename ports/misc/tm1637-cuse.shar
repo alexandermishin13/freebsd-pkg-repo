@@ -7,7 +7,7 @@ sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	tm1637-cuse
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20211123
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -64,6 +64,7 @@ Xman/man8/tm1637d.8.gz
 Xman/man1/tm1637ctl.1.gz
 X@dir etc/rc.conf.d
 X@sample etc/rc.conf.d/tm1637d.sample
+Xetc/rc.d/tm1637d
 X%%PORTDOCS%%%%DOCSDIR%%/README.md
 SHAR_END
 echo x misc/tm1637-cuse/files
@@ -75,7 +76,7 @@ X{ type: install
 X  message: <<EOM
 X
 XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
-XREADME.md is installed in %%DOCSDIR%%.
+XThe README.md is installed in %%DOCSDIR%%.
 X
 XLoad a cuse kernel module before start the service "tm1637d":
 X
