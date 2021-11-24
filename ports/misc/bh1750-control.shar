@@ -7,12 +7,14 @@ sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
 X# $FreeBSD$
 X
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20211123
+XDISTVERSION=	g20211124
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD daemon for a BH1750FVI based light sensor
+X
+XRUN_DEPENDS=	${KMODDIR}/bh1750.ko:misc/bh1750-kmod
 X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
