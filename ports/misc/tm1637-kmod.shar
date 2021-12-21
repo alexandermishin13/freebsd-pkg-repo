@@ -4,10 +4,8 @@ echo x misc/tm1637-kmod
 mkdir -p misc/tm1637-kmod > /dev/null 2>&1
 echo x misc/tm1637-kmod/Makefile
 sed 's/^X//' > misc/tm1637-kmod/Makefile << 'SHAR_END'
-X# $FreeBSD$
-X
 XPORTNAME=	tm1637-kmod
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20211221
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -17,16 +15,13 @@ X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on something else
-X
 XUSES=		kmod
 X
 X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-kmod
-XGL_COMMIT=	7db395ecd20dafdabd0c211b3800f3348aa6eba6
+XGL_COMMIT=	a7c13472d8b75afd2351fefe5e9d15b58b648579
 X
 XOPTIONS_DEFINE=	FDT
 XOPTIONS_DEFAULT=FDT
@@ -42,9 +37,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-kmod/distinfo
 sed 's/^X//' > misc/tm1637-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637568197
-XSHA256 (gpio/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = a36d995ac892808692e101b881fd5d40b51d7dbb619797444c5dd1b594b596d1
-XSIZE (gpio/alexandermishin13-tm1637-kmod-7db395ecd20dafdabd0c211b3800f3348aa6eba6_GL0.tar.gz) = 31206
+XTIMESTAMP = 1640104418
+XSHA256 (gpio/alexandermishin13-tm1637-kmod-a7c13472d8b75afd2351fefe5e9d15b58b648579_GL0.tar.gz) = 78f8fa08e5ba91d7464a4a72b128d41fa7df5979962c8333484aaa6f6c082ee4
+XSIZE (gpio/alexandermishin13-tm1637-kmod-a7c13472d8b75afd2351fefe5e9d15b58b648579_GL0.tar.gz) = 31227
 SHAR_END
 echo x misc/tm1637-kmod/pkg-descr
 sed 's/^X//' > misc/tm1637-kmod/pkg-descr << 'SHAR_END'

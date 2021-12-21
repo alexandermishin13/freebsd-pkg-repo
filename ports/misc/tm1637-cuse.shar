@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-cuse > /dev/null 2>&1
 echo x misc/tm1637-cuse/Makefile
 sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-cuse
-XDISTVERSION=	g20211129
+XDISTVERSION=	g20211221
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -15,14 +15,11 @@ X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	did not tested on anything else
-X
 X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-cuse
-XGL_COMMIT=	19eab129d783afe7dd0f43d2a227f4509539ed05
+XGL_COMMIT=	6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e
 X
 XSUB_FILES=	pkg-message
 X
@@ -50,9 +47,9 @@ XWWW: https://gitlab.com/alexandermishin13/tm1637-cuse
 SHAR_END
 echo x misc/tm1637-cuse/distinfo
 sed 's/^X//' > misc/tm1637-cuse/distinfo << 'SHAR_END'
-XTIMESTAMP = 1638212251
-XSHA256 (gpio/alexandermishin13-tm1637-cuse-19eab129d783afe7dd0f43d2a227f4509539ed05_GL0.tar.gz) = 76918c8147b13df65c1138d1647992a2ecca68f81baf6da657f921cdd326fe7b
-XSIZE (gpio/alexandermishin13-tm1637-cuse-19eab129d783afe7dd0f43d2a227f4509539ed05_GL0.tar.gz) = 12517
+XTIMESTAMP = 1640106406
+XSHA256 (gpio/alexandermishin13-tm1637-cuse-6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e_GL0.tar.gz) = ba246852e354053fa0a65740a973894e6bfa313897d72b6b552ee4def120798b
+XSIZE (gpio/alexandermishin13-tm1637-cuse-6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e_GL0.tar.gz) = 12623
 SHAR_END
 echo x misc/tm1637-cuse/pkg-plist
 sed 's/^X//' > misc/tm1637-cuse/pkg-plist << 'SHAR_END'
@@ -74,6 +71,12 @@ X{ type: install
 X  message: <<EOM
 X
 XSample of a service config is installed in %%PREFIX%%/etc/rc.conf.d/.
+XWARNING!!! Be careful with preconfigured scl an sda values.
+X           While they are suitable to Orange PI, using them on Raspberry PI
+X           cause the system to hang.
+X           When configuring the daemon, use the pins numbering relevant to
+X           Your platform.
+X
 XThe README.md is installed in %%DOCSDIR%%.
 X
 XLoad a cuse kernel module before start the service "tm1637d":
