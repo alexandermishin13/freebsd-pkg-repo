@@ -1,6 +1,8 @@
 #!/bin/sh
 
 REPO=/nvme/repo
-ABI=FreeBSD:13:armv7
+ARCH_LIST='armv7 aarch64'
 
-/usr/sbin/pkg repo ${REPO}/${ABI}/latest signing_command: ./repo_sign.sh
+for ARCH in ${ARCH_LIST}; do
+/usr/sbin/pkg repo ${REPO}/FreeBSD:13:${ARCH}/latest signing_command: ./repo_sign.sh
+done
