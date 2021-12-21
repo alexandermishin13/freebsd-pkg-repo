@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-clock > /dev/null 2>&1
 echo x misc/tm1637-clock/Makefile
 sed 's/^X//' > misc/tm1637-clock/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-clock
-XDISTVERSION=	g20211125
+XDISTVERSION=	g20211221
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 X
@@ -15,14 +15,11 @@ X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on anything else
-X
 X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-clock
-XGL_COMMIT=	054dac6cba64870339ff6bd653803efaa8cbc620
+XGL_COMMIT=	c9d2b0a09ccea894846e6e4791c9144b877f08da
 X
 XSUB_FILES=	pkg-message
 X
@@ -49,9 +46,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-clock/distinfo
 sed 's/^X//' > misc/tm1637-clock/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637665382
-XSHA256 (gpio/alexandermishin13-tm1637-clock-054dac6cba64870339ff6bd653803efaa8cbc620_GL0.tar.gz) = 3b1fa994d4c68756bab2a3446261b2725c691827b69039100aac14110f098ef5
-XSIZE (gpio/alexandermishin13-tm1637-clock-054dac6cba64870339ff6bd653803efaa8cbc620_GL0.tar.gz) = 24802
+XTIMESTAMP = 1639928078
+XSHA256 (gpio/alexandermishin13-tm1637-clock-c9d2b0a09ccea894846e6e4791c9144b877f08da_GL0.tar.gz) = 652b2579d7331a70b1ba05face163ebb8c422217d5af19b73003c7e33180c6cd
+XSIZE (gpio/alexandermishin13-tm1637-clock-c9d2b0a09ccea894846e6e4791c9144b877f08da_GL0.tar.gz) = 24808
 SHAR_END
 echo x misc/tm1637-clock/pkg-plist
 sed 's/^X//' > misc/tm1637-clock/pkg-plist << 'SHAR_END'
