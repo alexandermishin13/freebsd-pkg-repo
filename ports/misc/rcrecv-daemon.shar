@@ -4,29 +4,25 @@ echo x misc/rcrecv-daemon
 mkdir -p misc/rcrecv-daemon > /dev/null 2>&1
 echo x misc/rcrecv-daemon/Makefile
 sed 's/^X//' > misc/rcrecv-daemon/Makefile << 'SHAR_END'
-X# $FreeBSD$
-X
 XPORTNAME=	rcrecv-daemon
-XDISTVERSION=	g20211124
+XDISTVERSION=	g20211226
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
+XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
-XCOMMENT=	FreeBSD RC receiver daemon for the rcrecv-kmod driver.
-X
-XRUN_DEPENDS=	${KMODDIR}/rcrecv.ko:misc/rcrecv-kmod
+XCOMMENT=	FreeBSD RC receiver daemon for the rcrecv-kmod driver
 X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on anything else
+XRUN_DEPENDS=	${KMODDIR}/rcrecv.ko:misc/rcrecv-kmod
 X
 X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-daemon
-XGL_COMMIT=	5fa9ae4a38f6f823135959e0a83d0592d8a16715
+XGL_COMMIT=	88980d08dff15550e5165773bf84709c65b4c449
 X
 XSUB_FILES=	pkg-message
 X
@@ -44,9 +40,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-daemon/distinfo
 sed 's/^X//' > misc/rcrecv-daemon/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637610453
-XSHA256 (gpio/alexandermishin13-rcrecv-daemon-5fa9ae4a38f6f823135959e0a83d0592d8a16715_GL0.tar.gz) = 901aafe70b83775d86dad04608c04d059a2d8c6041f6579071396caa38a7521b
-XSIZE (gpio/alexandermishin13-rcrecv-daemon-5fa9ae4a38f6f823135959e0a83d0592d8a16715_GL0.tar.gz) = 7678
+XTIMESTAMP = 1640540487
+XSHA256 (gpio/alexandermishin13-rcrecv-daemon-88980d08dff15550e5165773bf84709c65b4c449_GL0.tar.gz) = 0881bc5754de3a310a3ea237d079590e350ea85676f8574c15d4f9535a660ebe
+XSIZE (gpio/alexandermishin13-rcrecv-daemon-88980d08dff15550e5165773bf84709c65b4c449_GL0.tar.gz) = 7664
 SHAR_END
 echo x misc/rcrecv-daemon/pkg-plist
 sed 's/^X//' > misc/rcrecv-daemon/pkg-plist << 'SHAR_END'
