@@ -6,21 +6,17 @@ echo x misc/rcrecv-kmod/files
 mkdir -p misc/rcrecv-kmod/files > /dev/null 2>&1
 echo x misc/rcrecv-kmod/Makefile
 sed 's/^X//' > misc/rcrecv-kmod/Makefile << 'SHAR_END'
-X# $FreeBSD$
-X
 XPORTNAME=	rcrecv-kmod
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20211226
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
+XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
-XCOMMENT=	FreeBSD kernel driver for gpio based remote control codes receiver.
+XCOMMENT=	FreeBSD kernel driver for gpio based remote control codes receiver
 X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
-X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on anything else
 X
 XUSES=		kmod
 X
@@ -28,7 +24,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-kmod
-XGL_COMMIT=	2279228b5b1f591d197d8a29c73346812d2cd934
+XGL_COMMIT=	3b1df92c6bae3e3852a582bbcd517e5074c8e50f
 X
 XOPTIONS_DEFINE=	FDT DOCS
 XOPTIONS_DEFAULT=FDT
@@ -50,9 +46,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-kmod/distinfo
 sed 's/^X//' > misc/rcrecv-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637598229
-XSHA256 (gpio/alexandermishin13-rcrecv-kmod-2279228b5b1f591d197d8a29c73346812d2cd934_GL0.tar.gz) = fe0ad7f41076c94f9c2929ee22898cc6f3a604e3a454bc9dfbf12effaf3ea689
-XSIZE (gpio/alexandermishin13-rcrecv-kmod-2279228b5b1f591d197d8a29c73346812d2cd934_GL0.tar.gz) = 196069
+XTIMESTAMP = 1640530471
+XSHA256 (gpio/alexandermishin13-rcrecv-kmod-3b1df92c6bae3e3852a582bbcd517e5074c8e50f_GL0.tar.gz) = 9cd7164ddcc5fb45d509d8884027dceb638f1ae36a0ade4a2f5456e42ad2cf49
+XSIZE (gpio/alexandermishin13-rcrecv-kmod-3b1df92c6bae3e3852a582bbcd517e5074c8e50f_GL0.tar.gz) = 196187
 SHAR_END
 echo x misc/rcrecv-kmod/pkg-descr
 sed 's/^X//' > misc/rcrecv-kmod/pkg-descr << 'SHAR_END'
