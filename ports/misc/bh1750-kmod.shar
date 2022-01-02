@@ -27,7 +27,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-kmod
-XGL_COMMIT=	cbf477be3f41d597a0399d35b9af39f3528442ee
+XGL_COMMIT=	2b49dacaba077dffa85007c3b4e27713e9534600
 X
 XSUB_FILES=	pkg-message
 X
@@ -39,9 +39,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-kmod/distinfo
 sed 's/^X//' > misc/bh1750-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1641134763
-XSHA256 (gpio/alexandermishin13-bh1750-kmod-cbf477be3f41d597a0399d35b9af39f3528442ee_GL0.tar.gz) = c3ef80b4227bffb5dee595f5bf5ec35d7a67da501988370825c723d4186b8bd5
-XSIZE (gpio/alexandermishin13-bh1750-kmod-cbf477be3f41d597a0399d35b9af39f3528442ee_GL0.tar.gz) = 24912
+XTIMESTAMP = 1641135141
+XSHA256 (gpio/alexandermishin13-bh1750-kmod-2b49dacaba077dffa85007c3b4e27713e9534600_GL0.tar.gz) = 8c592519584b79902586485a4257402a9d5889e486833a7fdeac78f35d72874a
+XSIZE (gpio/alexandermishin13-bh1750-kmod-2b49dacaba077dffa85007c3b4e27713e9534600_GL0.tar.gz) = 24923
 SHAR_END
 echo x misc/bh1750-kmod/pkg-descr
 sed 's/^X//' > misc/bh1750-kmod/pkg-descr << 'SHAR_END'
