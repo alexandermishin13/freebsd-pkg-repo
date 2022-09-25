@@ -4,23 +4,19 @@ echo x misc/bh1750-control
 mkdir -p misc/bh1750-control > /dev/null 2>&1
 echo x misc/bh1750-control/Makefile
 sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
-X# $FreeBSD$
-X
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20211124
+XDISTVERSION=	g20220103
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
+XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD daemon for a BH1750FVI based light sensor
 X
-XRUN_DEPENDS=	${KMODDIR}/bh1750.ko:misc/bh1750-kmod
-X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on anything else
+XRUN_DEPENDS=	${KMODDIR}/bh1750.ko:misc/bh1750-kmod
 X
 XPYTHON_NO_DEPENDS=yes
 XUSES+=		sqlite python:3.7+
@@ -29,7 +25,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-control
-XGL_COMMIT=	2a79ea32df9ff5182f6875c8b6ed785bdfc194bb
+XGL_COMMIT=	65baa9a0c90746c6be18e24699cd3e6455056798
 X
 XSUB_FILES=	pkg-message
 X
@@ -49,9 +45,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-control/distinfo
 sed 's/^X//' > misc/bh1750-control/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637568767
-XSHA256 (gpio/alexandermishin13-bh1750-control-2a79ea32df9ff5182f6875c8b6ed785bdfc194bb_GL0.tar.gz) = f1c32185f1a90ca67676846023269e3e0d60a527caebeeca99f0b446eaf3df84
-XSIZE (gpio/alexandermishin13-bh1750-control-2a79ea32df9ff5182f6875c8b6ed785bdfc194bb_GL0.tar.gz) = 12359
+XTIMESTAMP = 1641234121
+XSHA256 (gpio/alexandermishin13-bh1750-control-65baa9a0c90746c6be18e24699cd3e6455056798_GL0.tar.gz) = 0efaa0a7c2147cac12627a05970737097df0dcf42469eb56e2542fd85d82297f
+XSIZE (gpio/alexandermishin13-bh1750-control-65baa9a0c90746c6be18e24699cd3e6455056798_GL0.tar.gz) = 12408
 SHAR_END
 echo x misc/bh1750-control/pkg-plist
 sed 's/^X//' > misc/bh1750-control/pkg-plist << 'SHAR_END'

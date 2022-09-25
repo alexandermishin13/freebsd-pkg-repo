@@ -5,9 +5,10 @@ mkdir -p misc/tm1637-cuse > /dev/null 2>&1
 echo x misc/tm1637-cuse/Makefile
 sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-cuse
-XDISTVERSION=	g20211221
+XDISTVERSION=	g20211222
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
+XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD cuse based daemon for a tm1637 display
