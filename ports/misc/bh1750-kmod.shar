@@ -6,12 +6,11 @@ echo x misc/bh1750-kmod/files
 mkdir -p misc/bh1750-kmod/files > /dev/null 2>&1
 echo x misc/bh1750-kmod/Makefile
 sed 's/^X//' > misc/bh1750-kmod/Makefile << 'SHAR_END'
-X# $FreeBSD$
-X
 XPORTNAME=	bh1750-kmod
-XDISTVERSION=	g20211122
+XDISTVERSION=	g20220925
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
+XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
 XCOMMENT=	FreeBSD kernel driver for a BH1750FVI based light sensor
@@ -19,16 +18,13 @@ X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XONLY_FOR_ARCHS=	armv7
-XONLY_FOR_ARCHS_REASON=	not tested on anything else
-X
 XUSES=		kmod
 X
 X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-kmod
-XGL_COMMIT=	7f6ed6b2dea07dcd4be041c3dc9914812f42ee68
+XGL_COMMIT=	8e3c8f59d2504618b5fde6bc95341b95d97cf208
 X
 XSUB_FILES=	pkg-message
 X
@@ -40,9 +36,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-kmod/distinfo
 sed 's/^X//' > misc/bh1750-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1637568807
-XSHA256 (gpio/alexandermishin13-bh1750-kmod-7f6ed6b2dea07dcd4be041c3dc9914812f42ee68_GL0.tar.gz) = 9403fd704baf2a64433a5ab815c2e7d60853f447dd23e41184416c49f8c0d6b1
-XSIZE (gpio/alexandermishin13-bh1750-kmod-7f6ed6b2dea07dcd4be041c3dc9914812f42ee68_GL0.tar.gz) = 24880
+XTIMESTAMP = 1664053744
+XSHA256 (gpio/alexandermishin13-bh1750-kmod-8e3c8f59d2504618b5fde6bc95341b95d97cf208_GL0.tar.gz) = 75fd9cd189f689a4b57feb405d4f3e09e04f214403b426db72df0e017d51e5f2
+XSIZE (gpio/alexandermishin13-bh1750-kmod-8e3c8f59d2504618b5fde6bc95341b95d97cf208_GL0.tar.gz) = 24922
 SHAR_END
 echo x misc/bh1750-kmod/pkg-descr
 sed 's/^X//' > misc/bh1750-kmod/pkg-descr << 'SHAR_END'
