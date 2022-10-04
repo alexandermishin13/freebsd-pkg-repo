@@ -5,7 +5,7 @@ mkdir -p misc/bh1750-control > /dev/null 2>&1
 echo x misc/bh1750-control/Makefile
 sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20220103
+XDISTVERSION=	g20221004
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -16,10 +16,14 @@ X
 XLICENSE=	BSD2CLAUSE
 XLICENSE_FILE=	${WRKSRC}/LICENSE
 X
-XRUN_DEPENDS=	${KMODDIR}/bh1750.ko:misc/bh1750-kmod
+XRUN_DEPENDS=	${KMODDIR}/bh1750.ko:misc/bh1750-kmod \
+X		${PYTHON_PKGNAMEPREFIX}sysctl>0:devel/py-sysctl@${PY_FLAVOR}
 X
 XPYTHON_NO_DEPENDS=yes
-XUSES+=		sqlite python:3.7+
+XUSES+=		sqlite python:3.7+ shebangfix
+X
+XSHEBANG_FILES=	bh1750-control.py
+Xpython_OLD_CMD=	"/usr/bin/env python3" /usr/local/bin/python3.7
 X
 X# gitlab variables
 XUSE_GITLAB=	yes
