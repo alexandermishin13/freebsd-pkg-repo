@@ -7,7 +7,7 @@ mkdir -p misc/rcrecv-kmod/files > /dev/null 2>&1
 echo x misc/rcrecv-kmod/Makefile
 sed 's/^X//' > misc/rcrecv-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	rcrecv-kmod
-XDISTVERSION=	g20211226
+XDISTVERSION=	g20230224
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -24,7 +24,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-kmod
-XGL_COMMIT=	3b1df92c6bae3e3852a582bbcd517e5074c8e50f
+XGL_COMMIT=	fbe02536bda7a2930fdca4af9121febe32292e07
 X
 XOPTIONS_DEFINE=	FDT DOCS
 XOPTIONS_DEFAULT=FDT
@@ -46,9 +46,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-kmod/distinfo
 sed 's/^X//' > misc/rcrecv-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1640530471
-XSHA256 (gpio/alexandermishin13-rcrecv-kmod-3b1df92c6bae3e3852a582bbcd517e5074c8e50f_GL0.tar.gz) = 9cd7164ddcc5fb45d509d8884027dceb638f1ae36a0ade4a2f5456e42ad2cf49
-XSIZE (gpio/alexandermishin13-rcrecv-kmod-3b1df92c6bae3e3852a582bbcd517e5074c8e50f_GL0.tar.gz) = 196187
+XTIMESTAMP = 1677226048
+XSHA256 (gpio/alexandermishin13-rcrecv-kmod-fbe02536bda7a2930fdca4af9121febe32292e07_GL0.tar.gz) = edd5c4e30bcc71b0464ca80abf505fc8d0905712a2667c3cd6dc09cbd995a212
+XSIZE (gpio/alexandermishin13-rcrecv-kmod-fbe02536bda7a2930fdca4af9121febe32292e07_GL0.tar.gz) = 196668
 SHAR_END
 echo x misc/rcrecv-kmod/pkg-descr
 sed 's/^X//' > misc/rcrecv-kmod/pkg-descr << 'SHAR_END'
