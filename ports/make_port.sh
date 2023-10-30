@@ -33,7 +33,8 @@ fi
 /usr/bin/sed -r -i '' \
     -e "s/^DISTVERSION=.+$/DISTVERSION=\t${VER}/" \
     -e "s/^PORTREVISION=.+$/PORTREVISION=\t${REVISION}/" \
-    -e "s/^GL_COMMIT=.+$/GL_COMMIT=\t${GL_COMMIT}/" \
+    -e "s/^GL_TAGNAME=.+$/GL_TAGNAME=\t${GL_COMMIT}/" \
+    -e "s/^GL_COMMIT=.+$/GL_TAGNAME=\t${GL_COMMIT}/" \
     ./Makefile
 
 # Fetch archive and calculate checksums for 'distinfo'
