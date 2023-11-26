@@ -10,11 +10,13 @@ if [ ! ${CATEGORY} ] || [ ! ${PORT} ]; then
 fi
 
 CURDIR=`/bin/pwd`
-VER=`/bin/date -j +g%Y%m%d`
+#VER=`/bin/date -j +g%Y%m%d`
 
 cd ~mishin/src/${PORT}/
 CMD_GIT=/usr/local/bin/git
-GL_COMMIT=`${CMD_GIT} log --format="%H" -n 1`
+GL_TAGNAME=`${CMD_GIT} describe --tags`
+VER=${GL_TAGNAME}
+#GL_COMMIT=`${CMD_GIT} log --format="%H" -n 1`
 
 # Edit Makefile
 cd ${CURDIR}/${CATEGORY}/${PORT}
@@ -33,8 +35,8 @@ fi
 /usr/bin/sed -r -i '' \
     -e "s/^DISTVERSION=.+$/DISTVERSION=\t${VER}/" \
     -e "s/^PORTREVISION=.+$/PORTREVISION=\t${REVISION}/" \
-    -e "s/^GL_TAGNAME=.+$/GL_TAGNAME=\t${GL_COMMIT}/" \
-    -e "s/^GL_COMMIT=.+$/GL_TAGNAME=\t${GL_COMMIT}/" \
+    -e "s/^GL_TAGNAME=.+$/GL_TAGNAME=\t${GL_TAGNAME}/" \
+    -e "s/^GL_COMMIT=.+$/GL_TAGNAME=\t${GL_TAGNAME}/" \
     ./Makefile
 
 # Fetch archive and calculate checksums for 'distinfo'
