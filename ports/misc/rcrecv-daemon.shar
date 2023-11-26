@@ -5,7 +5,7 @@ mkdir -p misc/rcrecv-daemon > /dev/null 2>&1
 echo x misc/rcrecv-daemon/Makefile
 sed 's/^X//' > misc/rcrecv-daemon/Makefile << 'SHAR_END'
 XPORTNAME=	rcrecv-daemon
-XDISTVERSION=	g20231030
+XDISTVERSION=	v1.1
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -22,7 +22,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-daemon
-XGL_TAGNAME=	a8ccae72796ad4f3018d9a98b26e1bbcd3445d4a
+XGL_TAGNAME=	v1.1
 X
 XSUB_FILES=	pkg-message
 X
@@ -40,9 +40,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-daemon/distinfo
 sed 's/^X//' > misc/rcrecv-daemon/distinfo << 'SHAR_END'
-XTIMESTAMP = 1698599867
-XSHA256 (gpio/alexandermishin13-rcrecv-daemon-a8ccae72796ad4f3018d9a98b26e1bbcd3445d4a_GL0.tar.gz) = fa129dce8de6d4f58fe44f528a3727cddea569720b2e7000d7a742e98343d642
-XSIZE (gpio/alexandermishin13-rcrecv-daemon-a8ccae72796ad4f3018d9a98b26e1bbcd3445d4a_GL0.tar.gz) = 8027
+XTIMESTAMP = 1700951727
+XSHA256 (gpio/rcrecv-daemon-v1.1.tar.bz2) = 4a8b59f37ff6d0c8c71f02a6d512afb40e0e038f19158ec1ee6eb1be5996bc89
+XSIZE (gpio/rcrecv-daemon-v1.1.tar.bz2) = 9349
 SHAR_END
 echo x misc/rcrecv-daemon/pkg-plist
 sed 's/^X//' > misc/rcrecv-daemon/pkg-plist << 'SHAR_END'
