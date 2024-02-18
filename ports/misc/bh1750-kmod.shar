@@ -7,7 +7,7 @@ mkdir -p misc/bh1750-kmod/files > /dev/null 2>&1
 echo x misc/bh1750-kmod/Makefile
 sed 's/^X//' > misc/bh1750-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	bh1750-kmod
-XDISTVERSION=	g20230224
+XDISTVERSION=	v1.0
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -24,7 +24,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-kmod
-XGL_COMMIT=	5846f2fc1795d8b6332c004faae94228b1150a3d
+XGL_TAGNAME=	v1.0
 X
 XSUB_FILES=	pkg-message
 X
@@ -36,9 +36,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-kmod/distinfo
 sed 's/^X//' > misc/bh1750-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1677225286
-XSHA256 (gpio/alexandermishin13-bh1750-kmod-5846f2fc1795d8b6332c004faae94228b1150a3d_GL0.tar.gz) = 7d3dc03b2f1b6485c00e1c11e1e7b800ff66dca51af3d560de80a4ca102697d3
-XSIZE (gpio/alexandermishin13-bh1750-kmod-5846f2fc1795d8b6332c004faae94228b1150a3d_GL0.tar.gz) = 25066
+XTIMESTAMP = 1708252169
+XSHA256 (gpio/bh1750-kmod-v1.0.tar.bz2) = 8a5615613912ee93a77a9b28efc97276b3fe56cd31c9a53f9ff38b128a37f02d
+XSIZE (gpio/bh1750-kmod-v1.0.tar.bz2) = 25140
 SHAR_END
 echo x misc/bh1750-kmod/pkg-descr
 sed 's/^X//' > misc/bh1750-kmod/pkg-descr << 'SHAR_END'

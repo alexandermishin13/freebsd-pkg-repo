@@ -5,7 +5,7 @@ mkdir -p misc/bh1750-control > /dev/null 2>&1
 echo x misc/bh1750-control/Makefile
 sed 's/^X//' > misc/bh1750-control/Makefile << 'SHAR_END'
 XPORTNAME=	bh1750-control
-XDISTVERSION=	g20231031
+XDISTVERSION=	v1.0
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -29,7 +29,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-control
-XGL_TAGNAME=	eb6a905d17b44ce8baf3b0d8a5a87da83e6069f1
+XGL_TAGNAME=	v1.0
 X
 XSUB_FILES=	pkg-message
 X
@@ -49,9 +49,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-control/distinfo
 sed 's/^X//' > misc/bh1750-control/distinfo << 'SHAR_END'
-XTIMESTAMP = 1698696277
-XSHA256 (gpio/alexandermishin13-bh1750-control-eb6a905d17b44ce8baf3b0d8a5a87da83e6069f1_GL0.tar.gz) = d0a8f427ed3bcd84bee753b854dbcd590d086fc7581ab5f87bc6815eb670fe05
-XSIZE (gpio/alexandermishin13-bh1750-control-eb6a905d17b44ce8baf3b0d8a5a87da83e6069f1_GL0.tar.gz) = 12661
+XTIMESTAMP = 1708252768
+XSHA256 (gpio/bh1750-control-v1.0.tar.bz2) = 69a6264a11b4fbe838e3f65ba3fc47bae2fb808b643f38238aeff3fcff00a0c2
+XSIZE (gpio/bh1750-control-v1.0.tar.bz2) = 12803
 SHAR_END
 echo x misc/bh1750-control/pkg-plist
 sed 's/^X//' > misc/bh1750-control/pkg-plist << 'SHAR_END'
