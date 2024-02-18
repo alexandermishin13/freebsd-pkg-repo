@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-kmod > /dev/null 2>&1
 echo x misc/tm1637-kmod/Makefile
 sed 's/^X//' > misc/tm1637-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-kmod
-XDISTVERSION=	g20230225
+XDISTVERSION=	v1.0
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -22,7 +22,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-kmod
-XGL_COMMIT=	1398e367da68b27a5b0110bc7306442738867e5e
+XGL_TAGNAME=	v1.0
 X
 XOPTIONS_DEFINE=	FDT
 XOPTIONS_DEFAULT=FDT
@@ -38,9 +38,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-kmod/distinfo
 sed 's/^X//' > misc/tm1637-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1677314059
-XSHA256 (gpio/alexandermishin13-tm1637-kmod-1398e367da68b27a5b0110bc7306442738867e5e_GL0.tar.gz) = 46334d65f3f635f789d6f7338fa15fb2015c853dda44aac9936031a8802880ac
-XSIZE (gpio/alexandermishin13-tm1637-kmod-1398e367da68b27a5b0110bc7306442738867e5e_GL0.tar.gz) = 31408
+XTIMESTAMP = 1708257506
+XSHA256 (gpio/tm1637-kmod-v1.0.tar.bz2) = ac215f518a717e99e30ec498884d72796835e4867ae087dee6b8101c32473efd
+XSIZE (gpio/tm1637-kmod-v1.0.tar.bz2) = 31196
 SHAR_END
 echo x misc/tm1637-kmod/pkg-descr
 sed 's/^X//' > misc/tm1637-kmod/pkg-descr << 'SHAR_END'

@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-cuse > /dev/null 2>&1
 echo x misc/tm1637-cuse/Makefile
 sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-cuse
-XDISTVERSION=	g20211222
+XDISTVERSION=	v1.0
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -20,7 +20,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-cuse
-XGL_COMMIT=	6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e
+XGL_TAGNAME=	v1.0
 X
 XSUB_FILES=	pkg-message
 X
@@ -48,9 +48,9 @@ XWWW: https://gitlab.com/alexandermishin13/tm1637-cuse
 SHAR_END
 echo x misc/tm1637-cuse/distinfo
 sed 's/^X//' > misc/tm1637-cuse/distinfo << 'SHAR_END'
-XTIMESTAMP = 1640106406
-XSHA256 (gpio/alexandermishin13-tm1637-cuse-6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e_GL0.tar.gz) = ba246852e354053fa0a65740a973894e6bfa313897d72b6b552ee4def120798b
-XSIZE (gpio/alexandermishin13-tm1637-cuse-6ba0c83d87e54cdf7be17e0c7f0e479e863a3a1e_GL0.tar.gz) = 12623
+XTIMESTAMP = 1708258044
+XSHA256 (gpio/tm1637-cuse-v1.0.tar.bz2) = a1b4fbeaca2c531c79a1a2913eacd5ab358923154c7a1b1cf4c279d4c531e215
+XSIZE (gpio/tm1637-cuse-v1.0.tar.bz2) = 12361
 SHAR_END
 echo x misc/tm1637-cuse/pkg-plist
 sed 's/^X//' > misc/tm1637-cuse/pkg-plist << 'SHAR_END'
