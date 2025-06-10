@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-clock > /dev/null 2>&1
 echo x misc/tm1637-clock/Makefile
 sed 's/^X//' > misc/tm1637-clock/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-clock
-XDISTVERSION=	v1.0
+XDISTVERSION=	v1.0.2
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -20,7 +20,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-clock
-XGL_TAGNAME=	v1.0
+XGL_TAGNAME=	v1.0.2
 X
 XSUB_FILES=	pkg-message
 X
@@ -47,14 +47,14 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-clock/distinfo
 sed 's/^X//' > misc/tm1637-clock/distinfo << 'SHAR_END'
-XTIMESTAMP = 1708258249
-XSHA256 (gpio/tm1637-clock-v1.0.tar.bz2) = 2ae7ff16606b3705a8fd414095020be26d3d01ef89d9a364e326ea6c2822d6b3
-XSIZE (gpio/tm1637-clock-v1.0.tar.bz2) = 25552
+XTIMESTAMP = 1742119847
+XSHA256 (gpio/tm1637-clock-v1.0.2.tar.bz2) = 3b60140c2b7db41170f5b5f20fb387bf1b3e8db782e0e0312ba9d24d3c42ce35
+XSIZE (gpio/tm1637-clock-v1.0.2.tar.bz2) = 25510
 SHAR_END
 echo x misc/tm1637-clock/pkg-plist
 sed 's/^X//' > misc/tm1637-clock/pkg-plist << 'SHAR_END'
 Xsbin/tm1637clock
-Xman/man8/tm1637clock.8.gz
+Xshare/man/man8/tm1637clock.8.gz
 Xetc/rc.d/tm1637clock
 X@dir etc/rc.conf.d
 X@sample etc/rc.conf.d/tm1637clock.sample

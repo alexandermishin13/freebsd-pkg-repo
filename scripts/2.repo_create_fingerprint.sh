@@ -1,8 +1,8 @@
 #!/bin/sh
 
-REPO=/nvme/repo
-ARCH_LIST='armv7 aarch64'
+REPO=/gammix/repo
+ARCH_LIST='13:armv7 13:aarch64 14:armv7 14:aarch64'
 
 for ARCH in ${ARCH_LIST}; do
-/usr/sbin/pkg repo ${REPO}/FreeBSD:13:${ARCH}/latest signing_command: ./repo_sign.sh
+/usr/sbin/pkg repo ${REPO}/FreeBSD:${ARCH}/latest signing_command: ./repo_sign.sh
 done

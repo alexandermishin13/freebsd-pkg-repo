@@ -7,10 +7,10 @@ mkdir -p misc/rcrecv-kmod/files > /dev/null 2>&1
 echo x misc/rcrecv-kmod/Makefile
 sed 's/^X//' > misc/rcrecv-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	rcrecv-kmod
-XDISTVERSION=	g20230309
+XDISTVERSION=	v1.1.1
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
-XPORTREVISION=	2
+XPORTREVISION=	0
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
@@ -25,7 +25,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-kmod
-XGL_COMMIT=	1cce67589bb2ed7955ec101ed17570122b12760a
+XGL_TAGNAME=	v1.1.1
 X
 XOPTIONS_DEFINE=	FDT DOCS
 XOPTIONS_DEFAULT=FDT
@@ -47,9 +47,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-kmod/distinfo
 sed 's/^X//' > misc/rcrecv-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1678379680
-XSHA256 (gpio/alexandermishin13-rcrecv-kmod-1cce67589bb2ed7955ec101ed17570122b12760a_GL0.tar.gz) = 44c52a2e2937e1e50e5eb0c7f34b1dfba9e1e564e1985fbe686d96341c7cb8ca
-XSIZE (gpio/alexandermishin13-rcrecv-kmod-1cce67589bb2ed7955ec101ed17570122b12760a_GL0.tar.gz) = 197393
+XTIMESTAMP = 1749585123
+XSHA256 (gpio/rcrecv-kmod-v1.1.1.tar.bz2) = 593bec32f80bcba9647b70b1288614d45ef5ad6173bb145d8ef4811d736753d4
+XSIZE (gpio/rcrecv-kmod-v1.1.1.tar.bz2) = 199734
 SHAR_END
 echo x misc/rcrecv-kmod/pkg-descr
 sed 's/^X//' > misc/rcrecv-kmod/pkg-descr << 'SHAR_END'
@@ -75,20 +75,6 @@ Xman/man4/rcrecv.4.gz
 X@dir /usr/include/dev/rcrecv
 X/usr/include/dev/rcrecv/rcrecv.h
 X%%PORTDOCS%%%%DOCSDIR%%/README.md
-SHAR_END
-echo x misc/rcrecv-kmod/test.sh
-sed 's/^X//' > misc/rcrecv-kmod/test.sh << 'SHAR_END'
-X#!/bin/sh
-X
-XVER=`/bin/date -j +g%Y%m%d`
-XVER2=`sed -n 's/^DISTVERSION=[[:blank:]]*\(\)/\1/p' ./Makefile`
-X
-Xif [ $VER == $VER2 ]; then
-X    REV=`sed -n 's/^PORTREVISION=[[:blank:]]*\(\)/\1/p' ./Makefile`
-X    echo DISTVERSION=$VER2
-X    let 'REV+=1' > /dev/null
-X    echo PORTREVISION=$REV
-Xfi
 SHAR_END
 echo x misc/rcrecv-kmod/files/pkg-message.in
 sed 's/^X//' > misc/rcrecv-kmod/files/pkg-message.in << 'SHAR_END'
