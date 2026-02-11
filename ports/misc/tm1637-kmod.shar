@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-kmod > /dev/null 2>&1
 echo x misc/tm1637-kmod/Makefile
 sed 's/^X//' > misc/tm1637-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-kmod
-XDISTVERSION=	v1.0
+XDISTVERSION=	1.0.1
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -22,7 +22,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-kmod
-XGL_TAGNAME=	v1.0
+XGL_TAGNAME=	v1.0.1
 X
 XOPTIONS_DEFINE=	FDT
 XOPTIONS_DEFAULT=FDT
@@ -38,9 +38,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/tm1637-kmod/distinfo
 sed 's/^X//' > misc/tm1637-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1708257506
-XSHA256 (gpio/tm1637-kmod-v1.0.tar.bz2) = ac215f518a717e99e30ec498884d72796835e4867ae087dee6b8101c32473efd
-XSIZE (gpio/tm1637-kmod-v1.0.tar.bz2) = 31196
+XTIMESTAMP = 1749664975
+XSHA256 (gpio/tm1637-kmod-v1.0.1.tar.bz2) = 88aab928e98d36b28c6254064549b3a86e9dc9dc9f23f70ae1c17a5f178a6cd0
+XSIZE (gpio/tm1637-kmod-v1.0.1.tar.bz2) = 31138
 SHAR_END
 echo x misc/tm1637-kmod/pkg-descr
 sed 's/^X//' > misc/tm1637-kmod/pkg-descr << 'SHAR_END'
@@ -62,7 +62,7 @@ X%%EXAMPLESDIR%%/Makefile
 X@sample %%EXAMPLESDIR%%/sun8i-h2-plus-tm1637-gpio.dtso.sample
 X@sample %%EXAMPLESDIR%%/sun8i-h3-tm1637-gpio.dtso.sample
 X@sample %%EXAMPLESDIR%%/tm1637-gpio-rpi2.dtso.sample
-Xman/man4/tm1637.4.gz
+Xshare/man/man4/tm1637.4.gz
 X@dir /usr/include/dev/tm1637
 X/usr/include/dev/tm1637/tm1637.h
 SHAR_END

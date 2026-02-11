@@ -1,0 +1,23 @@
+PORTNAME=	
+DISTVERSION=	
+CATEGORIES=	misc
+DIST_SUBDIR=	gpio
+PKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
+
+MAINTAINER=	mishin@mh.net.ru
+COMMENT=	
+
+LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		kmod
+
+# gitlab variables
+USE_GITLAB=	yes
+GL_ACCOUNT=	alexandermishin13
+GL_PROJECT=	
+GL_TAGNAME=	
+
+SUB_FILES=	pkg-message
+
+.include <bsd.port.mk>

@@ -5,7 +5,7 @@ mkdir -p misc/tm1637-cuse > /dev/null 2>&1
 echo x misc/tm1637-cuse/Makefile
 sed 's/^X//' > misc/tm1637-cuse/Makefile << 'SHAR_END'
 XPORTNAME=	tm1637-cuse
-XDISTVERSION=	v1.0
+XDISTVERSION=	1.0.1
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -20,7 +20,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	tm1637-cuse
-XGL_TAGNAME=	v1.0
+XGL_TAGNAME=	v1.0.1
 X
 XSUB_FILES=	pkg-message
 X
@@ -48,16 +48,16 @@ XWWW: https://gitlab.com/alexandermishin13/tm1637-cuse
 SHAR_END
 echo x misc/tm1637-cuse/distinfo
 sed 's/^X//' > misc/tm1637-cuse/distinfo << 'SHAR_END'
-XTIMESTAMP = 1708258044
-XSHA256 (gpio/tm1637-cuse-v1.0.tar.bz2) = a1b4fbeaca2c531c79a1a2913eacd5ab358923154c7a1b1cf4c279d4c531e215
-XSIZE (gpio/tm1637-cuse-v1.0.tar.bz2) = 12361
+XTIMESTAMP = 1749666699
+XSHA256 (gpio/tm1637-cuse-v1.0.1.tar.bz2) = 5e23f6734b627334aa94de5cf89767f20b9f83b124e7426aa976ba4a9c22632e
+XSIZE (gpio/tm1637-cuse-v1.0.1.tar.bz2) = 12384
 SHAR_END
 echo x misc/tm1637-cuse/pkg-plist
 sed 's/^X//' > misc/tm1637-cuse/pkg-plist << 'SHAR_END'
 Xsbin/tm1637d
 Xbin/tm1637ctl
-Xman/man8/tm1637d.8.gz
-Xman/man1/tm1637ctl.1.gz
+Xshare/man/man8/tm1637d.8.gz
+Xshare/man/man1/tm1637ctl.1.gz
 X@dir etc/rc.conf.d
 X@sample etc/rc.conf.d/tm1637d.sample
 Xetc/rc.d/tm1637d

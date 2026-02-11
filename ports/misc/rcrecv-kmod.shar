@@ -7,10 +7,9 @@ mkdir -p misc/rcrecv-kmod/files > /dev/null 2>&1
 echo x misc/rcrecv-kmod/Makefile
 sed 's/^X//' > misc/rcrecv-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	rcrecv-kmod
-XDISTVERSION=	v1.1.1
+XDISTVERSION=	1.1.2
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
-XPORTREVISION=	0
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
 X
 XMAINTAINER=	mishin@mh.net.ru
@@ -25,7 +24,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	rcrecv-kmod
-XGL_TAGNAME=	v1.1.1
+XGL_TAGNAME=	v1.1.2
 X
 XOPTIONS_DEFINE=	FDT DOCS
 XOPTIONS_DEFAULT=FDT
@@ -47,9 +46,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/rcrecv-kmod/distinfo
 sed 's/^X//' > misc/rcrecv-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1749585123
-XSHA256 (gpio/rcrecv-kmod-v1.1.1.tar.bz2) = 593bec32f80bcba9647b70b1288614d45ef5ad6173bb145d8ef4811d736753d4
-XSIZE (gpio/rcrecv-kmod-v1.1.1.tar.bz2) = 199734
+XTIMESTAMP = 1770837691
+XSHA256 (gpio/rcrecv-kmod-v1.1.2.tar.bz2) = 0438063092a75f99d63cbf90b7571a0d056a18f5938ecd9c4e2e04d56c07fb31
+XSIZE (gpio/rcrecv-kmod-v1.1.2.tar.bz2) = 199791
 SHAR_END
 echo x misc/rcrecv-kmod/pkg-descr
 sed 's/^X//' > misc/rcrecv-kmod/pkg-descr << 'SHAR_END'
@@ -71,7 +70,7 @@ Xshare/examples/rcrecv-kmod/Makefile
 X@sample %%EXAMPLESDIR%%/sun8i-h2-plus-rcrecv-gpio.dtso.sample
 X@sample %%EXAMPLESDIR%%/sun8i-h3-rcrecv-gpio.dtso.sample
 X@sample %%EXAMPLESDIR%%/rcrecv-gpio-rpi2.dtso.sample
-Xman/man4/rcrecv.4.gz
+Xshare/man/man4/rcrecv.4.gz
 X@dir /usr/include/dev/rcrecv
 X/usr/include/dev/rcrecv/rcrecv.h
 X%%PORTDOCS%%%%DOCSDIR%%/README.md

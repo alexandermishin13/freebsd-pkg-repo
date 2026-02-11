@@ -7,7 +7,7 @@ mkdir -p misc/bh1750-kmod/files > /dev/null 2>&1
 echo x misc/bh1750-kmod/Makefile
 sed 's/^X//' > misc/bh1750-kmod/Makefile << 'SHAR_END'
 XPORTNAME=	bh1750-kmod
-XDISTVERSION=	v1.0
+XDISTVERSION=	1.0.1
 XCATEGORIES=	misc
 XDIST_SUBDIR=	gpio
 XPKGREPOSITORY=	${PACKAGES}/${DIST_SUBDIR}/${ARCH}
@@ -24,7 +24,7 @@ X# gitlab variables
 XUSE_GITLAB=	yes
 XGL_ACCOUNT=	alexandermishin13
 XGL_PROJECT=	bh1750-kmod
-XGL_TAGNAME=	v1.0
+XGL_TAGNAME=	v1.0.1
 X
 XSUB_FILES=	pkg-message
 X
@@ -36,9 +36,9 @@ X.include <bsd.port.mk>
 SHAR_END
 echo x misc/bh1750-kmod/distinfo
 sed 's/^X//' > misc/bh1750-kmod/distinfo << 'SHAR_END'
-XTIMESTAMP = 1708252169
-XSHA256 (gpio/bh1750-kmod-v1.0.tar.bz2) = 8a5615613912ee93a77a9b28efc97276b3fe56cd31c9a53f9ff38b128a37f02d
-XSIZE (gpio/bh1750-kmod-v1.0.tar.bz2) = 25140
+XTIMESTAMP = 1749590867
+XSHA256 (gpio/bh1750-kmod-v1.0.1.tar.bz2) = e6a47df2e70af3a904fee5f21796e58ced770bb2a703df624bfea60204988db8
+XSIZE (gpio/bh1750-kmod-v1.0.1.tar.bz2) = 25117
 SHAR_END
 echo x misc/bh1750-kmod/pkg-descr
 sed 's/^X//' > misc/bh1750-kmod/pkg-descr << 'SHAR_END'
@@ -59,7 +59,7 @@ Xshare/examples/bh1750-kmod/Makefile
 X@sample %%EXAMPLESDIR%%/sun8i-h2-plus-bh1750-i2c0.dtso.sample
 X@sample %%EXAMPLESDIR%%/sun8i-h3-bh1750-i2c0.dtso.sample
 X@sample %%EXAMPLESDIR%%/bh1750-rpi2-i2c0.dtso.sample
-Xman/man4/bh1750.4.gz
+Xshare/man/man4/bh1750.4.gz
 SHAR_END
 echo x misc/bh1750-kmod/files/pkg-message.in
 sed 's/^X//' > misc/bh1750-kmod/files/pkg-message.in << 'SHAR_END'
